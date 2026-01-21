@@ -75,13 +75,31 @@
             background: rgba(15, 23, 42, 0.7); 
             z-index: 1; /* 遮罩层在背景图之上 */
         }
+        /* 【新增】Logo 样式 */
+        .title-logo {
+            width: 64px; /* 设置为正方形 */
+            height: 64px;
+            margin-right: 1rem; /* Logo 与标题之间的间距 */
+            border-radius: 12px; /* 可选：添加圆角使 Logo 更美观 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 可选：添加阴影提升层次感 */
+            object-fit: contain; /* 确保图片填满正方形区域 */
+            background-color: transparent;
+        }
         .title-text {
             font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1rem;
+            line-height: 1.4;
+            margin-bottom: 0;
             background: linear-gradient(to right, #60a5fa, #a78bfa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        /* 【新增】标题区域容器 */
+        .title-container {
+            display: flex; /* 使用 Flexbox */
+            align-items: center; /* 垂直居中对齐 Logo 和标题 */
+            justify-content: center; /* 水平居中整个组合 */
+            margin-bottom: 1rem; /* 整个标题区域下方的间距 */
         }
 
         .subtitle-text {
@@ -297,7 +315,11 @@
 
     <header class="cover-header">
         <div class="max-w-5xl mx-auto z-10">
-            <h1 class="title-text">CityCube</h1>
+            <div class="title-container">
+                <img src="Figs/citycube_logo.png" alt="CityCube Logo" class="title-logo">
+                <h1 class="title-text">CityCube</h1>
+            </div>
+
             <p class="subtitle-text">
                 Benchmarking Cross-view Spatial Reasoning on Vision-Language Models in Urban Environments
             </p>
@@ -327,7 +349,7 @@
                     <p><sup>2</sup> State Key Laboratory of Digital Intelligent Modeling and Simulation</p>
                     <p><sup>3</sup> BNRist, Tsinghua University</p>
                     <p><sup>4</sup> Department of Electronic Engineering, Tsinghua University</p>
-                    <p class="pt-4 italic text-blue-400">Under Reviewing</p>
+                    <p class="pt-4 italic text-blue-400">Under Review</p>
                 </div>
             </div>
             <div class="flex flex-wrap justify-center gap-4">
@@ -810,8 +832,7 @@
             <div class="bg-gray-800 text-gray-300 p-6 rounded-lg overflow-x-auto font-mono text-sm">
 <pre>@article{CityCube2026,
   title={CityCube: Benchmarking Cross-view Spatial Reasoning on Vision-Language Models in Urban Environments},
-  author={Anonymous Authors},
-  journal={Under Review at ACL},
+  author={Haotian Xu, Yue Hu, Zhengqiu Zhu, Chen Gao, Quanjun Yin, Yong Li, et al.},
   year={2026}
 }</pre>
             </div>
